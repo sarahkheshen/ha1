@@ -88,7 +88,16 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("Sollte die Wurzel aus 25 ziehen und 5 anzeigen")
+    void testSquareRootOf25() {
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(2);
+        calc.pressDigitKey(5);
+        calc.pressUnaryOperationKey("√");
+        assertEquals("5", calc.readScreen ());
+    }
 
-    //TODO hier weitere Tests erstellen
-}
+    }
+
 
